@@ -1,18 +1,16 @@
-project:
-  title: Dynamiske kraftnett
-  author: Nils Jakob Johannesen
-
-format:
-  html:
-    theme: default
+title: Dynamiske kraftnett
+author: Nils Jakob Johannesen
 
 execute:
-  execute_notebooks: auto
+  execute_notebooks: force
 
-parse:
-  myst_enable_extensions:
-    - colon_fence
+sphinx:
+  config:
+    nb_execution_mode: force
 
-exports:
-  - format: html
-  - format: slides
+repository:
+  url: https://github.com/NilsJakob/dynamiske_kraftnett-book
+  branch: master
+
+html:
+  use_repository_button: true
