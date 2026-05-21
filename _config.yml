@@ -1,0 +1,18 @@
+project:
+  title: Dynamiske kraftnett
+  author: Nils Jakob Johannesen
+
+format:
+  html:
+    theme: default
+
+execute:
+  execute_notebooks: auto
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+
+exports:
+  - format: html
+  - format: slides

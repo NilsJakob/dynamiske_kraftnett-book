@@ -1,0 +1,6 @@
+
+format: jb-book
+root: intro
+
+chapters:
+  - file: 02_tallgrunnlag/norske_data_slides
