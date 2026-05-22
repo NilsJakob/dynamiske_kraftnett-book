@@ -10,28 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install jupyter-book
 
-      # ✅ BUILD WITHOUT EXECUTION (correct way)
       - name: Build the book
         run: |
-          jupyter-book build . -D nb_execution_mode=off
+          jupyter-book build .
 
-      # Deploy (clean)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
