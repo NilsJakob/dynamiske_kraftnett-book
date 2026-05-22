@@ -1,0 +1,27 @@
+/* Fjern maks bredde helt */
+.bd-container .bd-page-width,
+.bd-page-width,
+.bd-main,
+.bd-main .bd-content,
+.bd-main .bd-article-container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Gjør content bredere og finere */
+.bd-content {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Juster padding (optional) */
+.bd-content {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* Fjern høyre sidebar for mer plass */
+.bd-sidebar-secondary {
+  display: none !important;
+  width: 0 !important;
+}
