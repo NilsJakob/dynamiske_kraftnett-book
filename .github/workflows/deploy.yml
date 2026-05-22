@@ -2,42 +2,40 @@ name: deploy-book
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # ✅ Checkout repo
+      # Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ✅ Setup Python
+      # Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # ✅ Install dependencies
+      # Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install jupyter-book
 
-      # ✅ FORCE disable execution (THIS FIXES YOUR ERROR)
-      - name: Build the book (no execution)
+      # Build book (NO execution → fixes pandas error)
+      - name: Build the book
         run: |
-          export JUPYTERBOOK_EXECUTE=off
-          jupyter-book build .
+          jupyter-book build . --builder html -D nb_execution_mode=off
 
-      # ✅ Debug (optional but useful)
-        continue-on-error: false
-
-      # ✅ Deploy to GitHub Pages
+      # Deploy (clean overwrite)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
           force_orphan: true
+          keep_files: false
