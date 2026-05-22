@@ -10,10 +10,10 @@ repository:
 
 
 html:
-  theme:
-    options:
-      max_width: none
-      secondary_sidebar_items: []
+  theme_options:
+    max_width: 100%
+    secondary_sidebar_items: []
+
 
 
 
