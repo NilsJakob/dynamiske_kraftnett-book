@@ -26,12 +26,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install jupyter-book
 
-      # Build book (NO execution → fixes pandas error)
+      # ✅ BUILD WITHOUT EXECUTION (correct way)
       - name: Build the book
         run: |
-          jupyter-book build . --builder html -D nb_execution_mode=off
+          jupyter-book build . -D nb_execution_mode=off
 
-      # Deploy (clean overwrite)
+      # Deploy (clean)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
