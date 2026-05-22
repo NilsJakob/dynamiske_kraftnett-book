@@ -2,7 +2,7 @@ title: Dynamiske kraftnett
 author: Nils Jakob Johannesen
 
 execute:
-  execute_notebooks: force
+  execute_notebooks: off
 
 repository:
   url: https://github.com/NilsJakob/dynamiske_kraftnett-book
