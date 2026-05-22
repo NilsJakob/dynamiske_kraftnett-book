@@ -9,25 +9,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # ✅ Hent repo
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
+      # ✅ Sett opp Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: '3.11'
 
+      # ✅ Installer alt du trenger
       - name: Install dependencies
         run: |
-          pip install jupyter-book pandas matplotlib numpy scipy
+          python -m pip install --upgrade pip
+          pip install jupyter-book pandas numpy matplotlib scipy
 
+      # ✅ Bygg boka
       - name: Build the book
         run: |
           jupyter-book build .
 
-      - name: Check build
+      # ✅ Debug (veldig nyttig)
+      - name: Check build output
         run: |
           ls -R _build
 
+      # ✅ Deploy til GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
