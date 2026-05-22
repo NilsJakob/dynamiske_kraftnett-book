@@ -14,3 +14,7 @@ repository:
 
 html:
   use_repository_button: true
+
+
+bibtex_bibfiles:
+  - references.bib
