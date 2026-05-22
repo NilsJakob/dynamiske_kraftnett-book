@@ -9,10 +9,11 @@ repository:
   branch: master
 
 
+
 html:
-  theme_options:
-    max_width: 100%
-    secondary_sidebar_items: []
+  extra_css:
+    - custom.css
+
 
 
 
