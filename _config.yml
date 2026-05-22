@@ -8,19 +8,13 @@ repository:
   url: https://github.com/NilsJakob/dynamiske_kraftnett-book
   branch: master
 
-
-
-html:
-  extra_css:
-    - _static/custom.css
-
-
-
-
-
 bibtex_bibfiles:
   - references.bib
 
 sphinx:
   config:
+    html_static_path:
+      - _static
+    html_css_files:
+      - custom.css
     bibtex_default_style: ieee
