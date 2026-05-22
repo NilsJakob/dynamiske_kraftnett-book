@@ -21,9 +21,12 @@ jobs:
           pip install jupyter-book
           pip install pandas matplotlib numpy scipy
 
-      - name: Build the book
+      
+      - name: Build the book (myst)
         run: |
-          jupyter-book build .
+          pip install mystmd
+          myst build
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
