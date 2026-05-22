@@ -5,3 +5,4 @@ root: intro
 chapters:
   - file: 02_tallgrunnlag/norske_data_slides
   - file: 03_data/behandle_tall
+  - file: references
