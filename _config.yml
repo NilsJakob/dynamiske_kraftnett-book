@@ -8,8 +8,14 @@ repository:
   url: https://github.com/NilsJakob/dynamiske_kraftnett-book
   branch: master
 
+
 html:
-  use_repository_button: true
+  theme:
+    options:
+      max_width: none
+      secondary_sidebar_items: []
+
+
 
 bibtex_bibfiles:
   - references.bib
