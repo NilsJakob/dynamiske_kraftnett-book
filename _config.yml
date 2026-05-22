@@ -1,0 +1,19 @@
+title: Dynamiske kraftnett
+author: Nils Jakob Johannesen
+
+execute:
+  execute_notebooks: force
+
+repository:
+  url: https://github.com/NilsJakob/dynamiske_kraftnett-book
+  branch: master
+
+html:
+  use_repository_button: true
+
+bibtex_bibfiles:
+  - references.bib
+
+sphinx:
+  config:
+    bibtex_default_style: ieee
