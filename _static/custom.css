@@ -2,14 +2,17 @@
    GLOBAL LAYOUT (FUNGERER FOR ALLE SIDER)
 ============================================ */
 
-/* Samme bredde for markdown og notebooks */
+
+/* Wide but stable layout */
+
 .bd-main .bd-content,
 .bd-main .bd-content .bd-article-container {
-  max-width: 1200px !important;
-  width: 100% !important;
+  max-width: 95% !important;
+  width: 95% !important;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /* Sørg for at wrapper ikke begrenser bredden */
 .bd-main .bd-content {
