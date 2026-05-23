@@ -2,10 +2,13 @@
    SAFE LAYOUT (ikke ødelegger Jupyter Book grid)
 ==================================================== */
 
-/* Maks bredde på hovedinnhold */
-.bd-main .bd-content {
-  max-width: 1200px;
-  margin: 0 auto;
+/* ✅ Unified layout for both markdown AND notebooks */
+.bd-main .bd-content,
+.bd-main .bd-content .bd-article-container {
+  max-width: 1200px !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100% !important;
 }
 
 /* Litt mer luft rundt tekst */
@@ -119,3 +122,26 @@ html {
 .bd-article-meta {
   display: none;
 }
+
+/* ✅ Notebook-specific fix */
+
+div.cell {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+div.cell_input,
+div.cell_output,
+div.output {
+  width: 100% !important;
+}
+
+div.highlight {
+  max-width: 100% !important;
+}
+
+
+.bd-article-meta {
+  display: none;
+}
+
