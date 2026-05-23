@@ -1,1 +1,1 @@
-Dette er en test
+Velkommen til boken om dynamiske kraftnett
