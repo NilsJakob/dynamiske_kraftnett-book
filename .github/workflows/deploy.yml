@@ -22,10 +22,13 @@ jobs:
           pip install pandas matplotlib numpy scipy
 
       
-      - name: Build the book (myst)
+      
+      - name: Build the book
         run: |
-          pip install mystmd
-          myst build
+          jupyter-book build .
+          echo "=== FILES BUILT ==="
+          ls -R _build/ht
+
 
 
       - name: Deploy to GitHub Pages
