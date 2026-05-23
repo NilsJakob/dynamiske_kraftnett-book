@@ -2,7 +2,8 @@ name: deploy-book
 
 on:
   push:
-    branches: [main, master]
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -11,30 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          pip install jupyter-book
-          pip install pandas matplotlib numpy scipy
+          python -m pip install --upgrade pip
+          pip install "jupyter-book==0.15.1"
 
-      
-      
-      
       - name: Build the book
         run: |
-          pip install "jupyter-book<1.0"
-          jupyter-book build . --all
+          jupyter-book build .
 
-
-
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_build/html
+          publish_dir: _build/html
           force_orphan: true
