@@ -1,53 +1,13 @@
-/* ============================================
-   ✅ PROPER GRID FIX (FINAL)
-============================================ */
+/* =====================================================
+   ✅ SIMPLE + STABLE LAYOUT (NO CONFLICTS)
+===================================================== */
 
-/* Overstyr hele layout-grid korrekt */
-.bd-container {
-  grid-template-columns: auto minmax(0, 1fr) !important;
-}
-
-/* Fjern ekstra grid-kolonner som theme legger til */
-.bd-layout {
-  grid-template-columns: auto 1fr !important;
-}
-
-/* Sørg for at main fyller alt */
-.bd-main {
-  width: 100% !important;
-}
-
-
-/* ============================================
-   ✅ REMOVE ALL RIGHT-SIDE PANELS
-============================================ */
-
-/* Remove TOC / right sidebar */
-.bd-sidebar-secondary,
-.bd-toc,
-.bd-toc-nav {
-  display: none !important;
-}
-
-/* Remove notebook meta */
-.bd-article-meta,
-.bd-header-article {
-  display: none !important;
-}
-
-/* 🔥 THIS FIXES INTRO PAGE (Next/Previous block) */
-.bd-content .bd-article-nav {
-  display: none !important;
-}
-
-/* ============================================
-   ✅ FULL WIDTH CONTENT (NO LIMITS)
-============================================ */
-
+/* Fjern max width begrensning */
 .bd-page-width {
   max-width: none !important;
 }
 
+/* La innhold fylle hele plassen */
 .bd-main .bd-content,
 .bd-main .bd-article-container {
   max-width: none !important;
@@ -55,10 +15,39 @@
   margin: 0 !important;
 }
 
-/* ============================================
-   ✅ NOTEBOOK FIX
-============================================ */
+/* =====================================================
+   ✅ FJERN ALT SOM LAGER HØYREKOLONNE
+===================================================== */
 
+/* Fjern høyre sidebar / TOC */
+.bd-sidebar-secondary,
+.bd-toc,
+.bd-toc-nav {
+  display: none !important;
+}
+
+/* Fjern notebook metadata (author osv) */
+.bd-article-meta,
+.bd-header-article {
+  display: none !important;
+}
+
+/* Fjern Next / Previous (intro-problem) */
+.bd-article-nav {
+  display: none !important;
+}
+
+/* =====================================================
+   ✅ NOTEBOOK FIX (slutter layout mellom md/ipynb)
+===================================================== */
+
+.bd-content .bd-article-container,
+.bd-content .bd-article-container > div {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* celler */
 div.cell,
 div.cell_input,
 div.cell_output,
@@ -67,26 +56,17 @@ div.output {
   max-width: 100% !important;
 }
 
+/* kodeblokker */
 div.highlight {
   width: 100% !important;
-  max-width: 100% !important;
 }
 
-/* ============================================
-   ✅ CLEAN SPACING (OPTIONAL)
-============================================ */
+/* =====================================================
+   ✅ SMÅ JUSTERINGER (lesbarhet)
+===================================================== */
 
 .bd-content {
   padding-left: 12px;
   padding-right: 12px;
   line-height: 1.6;
-}
-
-
-/* 🔥 FINAL INNER WRAPPER FIX (last missing piece) */
-
-.bd-content .bd-article-container > div {
-  max-width: none !important;
-  width: 100% !important;
-  margin-right: 0 !important;
 }
