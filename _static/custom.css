@@ -1,48 +1,23 @@
-/* =====================================================
-   ✅ FULL WIDTH CONTENT (without breaking theme layout)
-===================================================== */
+/* ===========================================
+   ✅ REMOVE RIGHT COLUMN ELEMENTS
+=========================================== */
 
-/* Fjern max width-begrensning */
-.bd-page-width {
-  max-width: none !important;
-}
-
-/* La innhold bruke tilgjengelig plass */
-.bd-main .bd-content,
-.bd-main .bd-article-container {
-  max-width: none !important;
-}
-
-
-/* =====================================================
-   ✅ FJERN HØYRE NAV (INTRO PROBLEM)
-===================================================== */
-
-/* Next / Previous */
-.bd-article-nav {
+/* Next / Previous navigation (intro) */
+.bd-content .bd-article-nav {
   display: none !important;
 }
 
-
-/* =====================================================
-   ✅ FJERN NOTEBOOK HEADER + META (Tallbehandling)
-===================================================== */
-
-/* Header over notebook (Previous + author) */
+/* Notebook header (Previous + author line) */
 .bd-header-article {
   display: none !important;
 }
 
-/* Metadata */
+/* Metadata block */
 .bd-article-meta {
   display: none !important;
 }
 
-
-/* =====================================================
-   ✅ FJERN EVENTUELL HØYRE TOC
-===================================================== */
-
+/* Right sidebar / TOC */
 .bd-sidebar-secondary,
 .bd-toc,
 .bd-toc-nav {
@@ -50,41 +25,56 @@
 }
 
 
-/* =====================================================
-   ✅ NOTEBOOK WIDTH FIX (very important)
-===================================================== */
+/* ===========================================
+   ✅ FIX WIDTH (SAFE – DO NOT BREAK THEME)
+=========================================== */
 
-/* container rundt notebook */
+/* Remove max width constraint */
+.bd-page-width {
+  max-width: none !important;
+}
+
+/* Ensure content expands */
+.bd-main .bd-content {
+  max-width: none !important;
+}
+
+
+/* ===========================================
+   ✅ NOTEBOOK FIX (CRITICAL PART)
+=========================================== */
+
+/* Notebook container */
 .bd-content .bd-article-container {
   max-width: none !important;
 }
 
-/* inner wrapper (dette var siste bugen hos deg) */
+/* Inner wrapper (very important) */
 .bd-content .bd-article-container > div {
   max-width: none !important;
   width: 100% !important;
 }
 
-
-/* celler */
+/* Cells */
 div.cell,
 div.cell_input,
-div.cell_output {
+div.cell_output,
+div.output {
   width: 100% !important;
   max-width: 100% !important;
 }
 
-/* kodeblokker */
+/* Code blocks */
 div.highlight {
   max-width: 100% !important;
 }
 
 
-/* =====================================================
-   ✅ LETT JUSTERING (optional men stabil)
-===================================================== */
+/* ===========================================
+   ✅ SMALL SPACING FIX (optional)
+=========================================== */
 
 .bd-content {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
