@@ -9,3 +9,6 @@ html_theme: sphinx_book_theme
 html_theme_options:
   show_prev_next: false
   secondary_sidebar_items: []
+
+exclude_patterns:
+  - 03_data/behandle_tall.ipynb
