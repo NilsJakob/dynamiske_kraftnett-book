@@ -1,4 +1,24 @@
 /* ============================================
+   ✅ PROPER GRID FIX (FINAL)
+============================================ */
+
+/* Overstyr hele layout-grid korrekt */
+.bd-container {
+  grid-template-columns: auto minmax(0, 1fr) !important;
+}
+
+/* Fjern ekstra grid-kolonner som theme legger til */
+.bd-layout {
+  grid-template-columns: auto 1fr !important;
+}
+
+/* Sørg for at main fyller alt */
+.bd-main {
+  width: 100% !important;
+}
+
+
+/* ============================================
    ✅ REMOVE ALL RIGHT-SIDE PANELS
 ============================================ */
 
