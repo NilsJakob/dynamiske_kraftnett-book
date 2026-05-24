@@ -1,3 +1,14 @@
+
+/* ✅ REMOVE MAX WIDTH LIMIT (ROOT FIX) */
+
+.bd-page-width {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+
+
 /* ============================================
    ✅ LEFT-ALIGNED FULL WIDTH LAYOUT
 ============================================ */
