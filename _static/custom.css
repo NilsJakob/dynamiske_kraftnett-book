@@ -1,4 +1,38 @@
 
+
+/* ============================================
+   ✅ FORCE SINGLE-COLUMN LAYOUT
+   (THIS FIXES YOUR EXACT PROBLEM)
+============================================ */
+
+/* Overstyr hele grid-layouten */
+.bd-container {
+  display: grid !important;
+  grid-template-columns: 300px 1fr !important;
+}
+
+/* Fjern høyre kolonne helt */
+.bd-sidebar-secondary,
+.bd-toc,
+.bd-toc-nav {
+  display: none !important;
+}
+
+/* Sørg for at main content fyller resten */
+.bd-main {
+  grid-column: 2 / 3 !important;
+  width: 100% !important;
+}
+
+/* Fjern max-width restriksjoner */
+.bd-page-width,
+.bd-main,
+.bd-content,
+.bd-article-container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
 /* ✅ REMOVE MAX WIDTH LIMIT (ROOT FIX) */
 
 .bd-page-width {
