@@ -36,11 +36,47 @@
    (THIS FIXES YOUR EXACT PROBLEM)
 ============================================ */
 
-/* Overstyr hele grid-layouten */
-.bd-container {
-  display: grid !important;
-  grid-template-columns: 300px 1fr !important;
+/* ======================================
+   ✅ ONLY REMOVE WIDTH LIMITS (SAFE)
+====================================== */
+
+/* Fjern max width på hele layout */
+.bd-page-width {
+  max-width: none !important;
 }
+
+/* La content fylle tilgjengelig plass */
+.bd-main .bd-content {
+  max-width: none !important;
+  margin-right: 0 !important;
+}
+
+/* Fiks notebooks */
+.bd-main .bd-article-container {
+  max-width: none !important;
+}
+
+/* Fjern høyre TOC / sidebar */
+.bd-sidebar-secondary,
+.bd-toc,
+.bd-toc-nav {
+  display: none !important;
+}
+
+/* Fjern meta */
+.bd-article-meta,
+.bd-header-article {
+  display: none !important;
+}
+
+/* Notebook celler */
+div.cell,
+div.cell_input,
+div.cell_output {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 
 /* Fjern høyre kolonne helt */
 .bd-sidebar-secondary,
