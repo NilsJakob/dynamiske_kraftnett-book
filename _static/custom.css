@@ -1,15 +1,8 @@
-/* Fjern max width */
 .bd-page-width {
   max-width: none !important;
 }
 
-/* La content fylle plassen */
 .bd-main .bd-content {
-  max-width: none !important;
-}
-
-/* Sørg for at notebooks også fyller */
-.bd-content .bd-article-container {
   max-width: none !important;
 }
 
