@@ -1,72 +1,90 @@
 /* =====================================================
-   ✅ SIMPLE + STABLE LAYOUT (NO CONFLICTS)
+   ✅ FULL WIDTH CONTENT (without breaking theme layout)
 ===================================================== */
 
-/* Fjern max width begrensning */
+/* Fjern max width-begrensning */
 .bd-page-width {
   max-width: none !important;
 }
 
-/* La innhold fylle hele plassen */
+/* La innhold bruke tilgjengelig plass */
 .bd-main .bd-content,
 .bd-main .bd-article-container {
   max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
 }
 
+
 /* =====================================================
-   ✅ FJERN ALT SOM LAGER HØYREKOLONNE
+   ✅ FJERN HØYRE NAV (INTRO PROBLEM)
 ===================================================== */
 
-/* Fjern høyre sidebar / TOC */
+/* Next / Previous */
+.bd-article-nav {
+  display: none !important;
+}
+
+
+/* =====================================================
+   ✅ FJERN NOTEBOOK HEADER + META (Tallbehandling)
+===================================================== */
+
+/* Header over notebook (Previous + author) */
+.bd-header-article {
+  display: none !important;
+}
+
+/* Metadata */
+.bd-article-meta {
+  display: none !important;
+}
+
+
+/* =====================================================
+   ✅ FJERN EVENTUELL HØYRE TOC
+===================================================== */
+
 .bd-sidebar-secondary,
 .bd-toc,
 .bd-toc-nav {
   display: none !important;
 }
 
-/* Fjern notebook metadata (author osv) */
-.bd-article-meta,
-.bd-header-article {
-  display: none !important;
-}
-
-/* Fjern Next / Previous (intro-problem) */
-.bd-article-nav {
-  display: none !important;
-}
 
 /* =====================================================
-   ✅ NOTEBOOK FIX (slutter layout mellom md/ipynb)
+   ✅ NOTEBOOK WIDTH FIX (very important)
 ===================================================== */
 
-.bd-content .bd-article-container,
+/* container rundt notebook */
+.bd-content .bd-article-container {
+  max-width: none !important;
+}
+
+/* inner wrapper (dette var siste bugen hos deg) */
 .bd-content .bd-article-container > div {
   max-width: none !important;
   width: 100% !important;
 }
 
+
 /* celler */
 div.cell,
 div.cell_input,
-div.cell_output,
-div.output {
+div.cell_output {
   width: 100% !important;
   max-width: 100% !important;
 }
 
 /* kodeblokker */
 div.highlight {
-  width: 100% !important;
+  max-width: 100% !important;
 }
 
+
 /* =====================================================
-   ✅ SMÅ JUSTERINGER (lesbarhet)
+   ✅ LETT JUSTERING (optional men stabil)
 ===================================================== */
 
 .bd-content {
-  padding-left: 12px;
-  padding-right: 12px;
-  line-height: 1.6;
+  padding-left: 8px;
+  padding-right: 8px;
 }
