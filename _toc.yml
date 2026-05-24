@@ -2,5 +2,3 @@
 format: jb-book
 root: intro
 
-chapters:
-  - file: 03_data/behandle_tall
