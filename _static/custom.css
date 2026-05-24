@@ -81,3 +81,12 @@ div.highlight {
   padding-right: 12px;
   line-height: 1.6;
 }
+
+
+/* 🔥 FINAL INNER WRAPPER FIX (last missing piece) */
+
+.bd-content .bd-article-container > div {
+  max-width: none !important;
+  width: 100% !important;
+  margin-right: 0 !important;
+}
