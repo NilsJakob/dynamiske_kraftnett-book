@@ -1,250 +1,63 @@
+/* ============================================
+   ✅ REMOVE ALL RIGHT-SIDE PANELS
+============================================ */
 
-/* =========================
-   ✅ REAL ROOT FIX
-========================= */
-
-/* Fjern global begrensning */
-.bd-page-width {
-  max-width: none !important;
-  width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+/* Remove TOC / right sidebar */
+.bd-sidebar-secondary,
+.bd-toc,
+.bd-toc-nav {
+  display: none !important;
 }
 
-/* Fjern layout-padding */
-.bd-container {
-  padding: 0 !important;
-  margin: 0 !important;
+/* Remove notebook meta */
+.bd-article-meta,
+.bd-header-article {
+  display: none !important;
 }
 
-/* Fjern padding rundt main */
-.bd-main {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 !important;
-}
-
-/* Fjern inner content padding som stopper deg */
-.bd-content {
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  margin: 0 !important;
+/* 🔥 THIS FIXES INTRO PAGE (Next/Previous block) */
+.bd-content .bd-article-nav {
+  display: none !important;
 }
 
 /* ============================================
-   ✅ FORCE SINGLE-COLUMN LAYOUT
-   (THIS FIXES YOUR EXACT PROBLEM)
+   ✅ FULL WIDTH CONTENT (NO LIMITS)
 ============================================ */
 
-/* ======================================
-   ✅ ONLY REMOVE WIDTH LIMITS (SAFE)
-====================================== */
-
-/* Fjern max width på hele layout */
 .bd-page-width {
   max-width: none !important;
 }
 
-/* La content fylle tilgjengelig plass */
-.bd-main .bd-content {
-  max-width: none !important;
-  margin-right: 0 !important;
-}
-
-/* Fiks notebooks */
+.bd-main .bd-content,
 .bd-main .bd-article-container {
   max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
-/* Fjern høyre TOC / sidebar */
-.bd-sidebar-secondary,
-.bd-toc,
-.bd-toc-nav {
-  display: none !important;
-}
+/* ============================================
+   ✅ NOTEBOOK FIX
+============================================ */
 
-/* Fjern meta */
-.bd-article-meta,
-.bd-header-article {
-  display: none !important;
-}
-
-/* Notebook celler */
 div.cell,
-div.cell_input,
-div.cell_output {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-
-/* Fjern høyre kolonne helt */
-.bd-sidebar-secondary,
-.bd-toc,
-.bd-toc-nav {
-  display: none !important;
-}
-
-/* Sørg for at main content fyller resten */
-.bd-main {
-  grid-column: 2 / 3 !important;
-  width: 100% !important;
-}
-
-/* Fjern max-width restriksjoner */
-.bd-page-width,
-.bd-main,
-.bd-content,
-.bd-article-container {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-}
-/* ✅ REMOVE MAX WIDTH LIMIT (ROOT FIX) */
-
-.bd-page-width {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-}
-
-
-
-/* ============================================
-   ✅ LEFT-ALIGNED FULL WIDTH LAYOUT
-============================================ */
-
-/* Fyll hele bredden til høyre, men start ved sidebar */
-.bd-main .bd-content,
-.bd-main .bd-content .bd-article-container {
-  max-width: none !important;
-  width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Sørg for at wrapper ikke begrenser */
-.bd-main .bd-content {
-  width: 100% !important;
-}
-
-
-/* ============================================
-   ✅ REMOVE RIGHT COLUMN (ROOT FIX)
-============================================ */
-
-/* Fjern høyre sidebar / TOC */
-.bd-sidebar-secondary,
-.bd-toc,
-.bd-toc-nav {
-  display: none !important;
-}
-
-/* Fjern meta-panel (top-right info) */
-.bd-article-meta,
-.bd-header-article {
-  display: none !important;
-}
-
-/* Tving notebook layout til én kolonne */
-.bd-main article {
-  display: block !important;
-  width: 100% !important;
-}
-
-
-/* ============================================
-   ✅ NOTEBOOK FIX (CRITICAL)
-============================================ */
-
-div.cell {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
 div.cell_input,
 div.cell_output,
 div.output {
   width: 100% !important;
+  max-width: 100% !important;
 }
 
 div.highlight {
   width: 100% !important;
   max-width: 100% !important;
-  border-radius: 8px;
-  padding: 0.75rem;
-  margin-top: 1rem;
 }
 
-
 /* ============================================
-   ✅ TYPOGRAPHY
+   ✅ CLEAN SPACING (OPTIONAL)
 ============================================ */
 
 .bd-content {
-  line-height: 1.7;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 1rem;
-}
-
-h2 {
-  margin-top: 2rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-
-/* ============================================
-   ✅ SIDEBAR
-============================================ */
-
-.bd-sidebar {
-  font-size: 0.95rem;
-}
-
-
-/* ============================================
-   ✅ TABLES
-============================================ */
-
-table {
-  width: 100%;
-}
-
-table td,
-table th {
-  padding: 0.5rem;
-}
-
-
-/* ============================================
-   ✅ LINKS
-============================================ */
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-/* ============================================
-   ✅ UI POLISH
-============================================ */
-
-.bd-page-title {
-  font-weight: 600;
-}
-
-html {
-  scroll-behavior: smooth;
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 1.6;
 }
