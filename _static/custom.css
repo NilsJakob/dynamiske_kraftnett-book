@@ -1,4 +1,35 @@
 
+/* =========================
+   ✅ REAL ROOT FIX
+========================= */
+
+/* Fjern global begrensning */
+.bd-page-width {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fjern layout-padding */
+.bd-container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Fjern padding rundt main */
+.bd-main {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+/* Fjern inner content padding som stopper deg */
+.bd-content {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  margin: 0 !important;
+}
 
 /* ============================================
    ✅ FORCE SINGLE-COLUMN LAYOUT
