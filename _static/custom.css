@@ -1,35 +1,78 @@
 /* ============================================
-   GLOBAL LAYOUT (FUNGERER FOR ALLE SIDER)
+   ✅ LEFT-ALIGNED FULL WIDTH LAYOUT
 ============================================ */
 
-
-
-/* ✅ LEFT-ALIGNED (det du faktisk ønsker) */
-
+/* Fyll hele bredden til høyre, men start ved sidebar */
 .bd-main .bd-content,
 .bd-main .bd-content .bd-article-container {
   max-width: none !important;
-  width: calc(100% - 2rem) !important;
+  width: 100% !important;
   margin-left: 0 !important;
-  margin-right: 1rem !important;
+  margin-right: 0 !important;
 }
 
-
-
-/* Sørg for at wrapper ikke begrenser bredden */
+/* Sørg for at wrapper ikke begrenser */
 .bd-main .bd-content {
   width: 100% !important;
 }
 
 
 /* ============================================
-   TYPOGRAFI
+   ✅ REMOVE RIGHT COLUMN (ROOT FIX)
+============================================ */
+
+/* Fjern høyre sidebar / TOC */
+.bd-sidebar-secondary,
+.bd-toc,
+.bd-toc-nav {
+  display: none !important;
+}
+
+/* Fjern meta-panel (top-right info) */
+.bd-article-meta,
+.bd-header-article {
+  display: none !important;
+}
+
+/* Tving notebook layout til én kolonne */
+.bd-main article {
+  display: block !important;
+  width: 100% !important;
+}
+
+
+/* ============================================
+   ✅ NOTEBOOK FIX (CRITICAL)
+============================================ */
+
+div.cell {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+div.cell_input,
+div.cell_output,
+div.output {
+  width: 100% !important;
+}
+
+div.highlight {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+
+
+/* ============================================
+   ✅ TYPOGRAPHY
 ============================================ */
 
 .bd-content {
   line-height: 1.7;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 h1 {
@@ -47,7 +90,7 @@ p {
 
 
 /* ============================================
-   SIDEBAR
+   ✅ SIDEBAR
 ============================================ */
 
 .bd-sidebar {
@@ -55,58 +98,8 @@ p {
 }
 
 
-/* Tving bort høyre sidebar */
-
-.bd-sidebar-secondary,
-.bd-toc,
-.bd-toc-nav {
-  display: none !important;
-}
-
-
-
-.bd-article-meta {
-  display: none !important;
-}
-
-
 /* ============================================
-   NOTEBOOK FIX (KRITISK)
-============================================ */
-
-/* Sørg for full bredde i celler */
-div.cell {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-div.cell_input,
-div.cell_output,
-div.output {
-  width: 100% !important;
-}
-
-/* Kodeblokker */
-div.highlight {
-  width: 100% !important;
-  max-width: 100% !important;
-  border-radius: 8px;
-  padding: 0.75rem;
-  margin-top: 1rem;
-}
-
-/* Litt luft rundt cells */
-div.cell_input {
-  margin-top: 1rem;
-}
-
-div.cell_output {
-  padding: 0.5rem;
-}
-
-
-/* ============================================
-   TABELLER
+   ✅ TABLES
 ============================================ */
 
 table {
@@ -120,7 +113,7 @@ table th {
 
 
 /* ============================================
-   LENKER
+   ✅ LINKS
 ============================================ */
 
 a {
@@ -133,7 +126,7 @@ a:hover {
 
 
 /* ============================================
-   SMOOTH UI
+   ✅ UI POLISH
 ============================================ */
 
 .bd-page-title {
