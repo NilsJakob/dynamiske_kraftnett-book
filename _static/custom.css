@@ -1,80 +1,19 @@
-/* ===========================================
-   ✅ REMOVE RIGHT COLUMN ELEMENTS
-=========================================== */
-
-/* Next / Previous navigation (intro) */
-.bd-content .bd-article-nav {
-  display: none !important;
-}
-
-/* Notebook header (Previous + author line) */
-.bd-header-article {
-  display: none !important;
-}
-
-/* Metadata block */
-.bd-article-meta {
-  display: none !important;
-}
-
-/* Right sidebar / TOC */
-.bd-sidebar-secondary,
-.bd-toc,
-.bd-toc-nav {
-  display: none !important;
-}
-
-
-/* ===========================================
-   ✅ FIX WIDTH (SAFE – DO NOT BREAK THEME)
-=========================================== */
-
-/* Remove max width constraint */
+/* Fjern max width */
 .bd-page-width {
   max-width: none !important;
 }
 
-/* Ensure content expands */
+/* La content fylle plassen */
 .bd-main .bd-content {
   max-width: none !important;
 }
 
-
-/* ===========================================
-   ✅ NOTEBOOK FIX (CRITICAL PART)
-=========================================== */
-
-/* Notebook container */
+/* Sørg for at notebooks også fyller */
 .bd-content .bd-article-container {
   max-width: none !important;
 }
 
-/* Inner wrapper (very important) */
 .bd-content .bd-article-container > div {
   max-width: none !important;
   width: 100% !important;
-}
-
-/* Cells */
-div.cell,
-div.cell_input,
-div.cell_output,
-div.output {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-/* Code blocks */
-div.highlight {
-  max-width: 100% !important;
-}
-
-
-/* ===========================================
-   ✅ SMALL SPACING FIX (optional)
-=========================================== */
-
-.bd-content {
-  padding-left: 10px;
-  padding-right: 10px;
 }
