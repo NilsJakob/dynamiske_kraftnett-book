@@ -1,4 +1,3 @@
-
 title: Dynamiske kraftnett
 author: Nils Jakob Johannesen
 
@@ -8,7 +7,7 @@ execute:
 sphinx:
   config:
     html_theme_options:
-      secondary_sidebar_items: []   # 🔥 fjerner høyre sidebar
+
 
 html_theme_options:
-  show_prev_next: false   # 🔥 fjerner Next/Previous
+  show_prev_next: false   # ✅ fjerner Next/Previous
