@@ -4,10 +4,8 @@ author: Nils Jakob Johannesen
 execute:
   execute_notebooks: false
 
-sphinx:
-  config:
-    html_theme_options:
-
+html_theme: sphinx_book_theme
 
 html_theme_options:
-  show_prev_next: false   # ✅ fjerner Next/Previous
+  show_prev_next: false
+  secondary_sidebar_items: []
