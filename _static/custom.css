@@ -293,3 +293,36 @@ aside.bd-sidebar {
     font-weight: inherit !important;
     color: inherit !important;
 }
+
+/* =========================================
+   FORCE FULL WIDTH (OVERRIDE EVERYTHING)
+========================================= */
+
+/* Force main layout grid */
+.bd-layout {
+    grid-template-columns: 260px 1fr !important;
+}
+
+/* Remove right TOC completely */
+.bd-sidebar-secondary,
+.bd-toc {
+    display: none !important;
+}
+
+/* Expand main content */
+.bd-main {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure article fills width */
+.bd-content {
+    width: 100% !important;
+}
+
+/* Force inner container wide */
+.bd-article-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
