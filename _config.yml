@@ -14,8 +14,6 @@ html_theme_options:
 html_static_path:
   - _static
 
-html_css_files:
-  - custom2.css
 
 exclude_patterns:
   - jb-env/**
@@ -24,7 +22,9 @@ exclude_patterns:
 
 sphinx:
   config:
-    thebe_config: {}
+    html_css_files:
+      - custom2.css
+
   extra_extensions: 
     - sphinxcontrib.bibtex
 
