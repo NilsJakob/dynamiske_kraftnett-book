@@ -23,7 +23,7 @@ jobs:
 
       - name: Build the book
         run: |
-          jupyter-book build . --keep going
+          jupyter-book build . --keep-going
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
