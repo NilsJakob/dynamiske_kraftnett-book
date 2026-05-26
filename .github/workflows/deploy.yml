@@ -1,12 +1,13 @@
-name: test
+
+name: deploy-test
 
 on:
   push:
 
 jobs:
-  run:
+  test:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "hello"
 
+    steps:
+      - run: echo "deploy works"
 
