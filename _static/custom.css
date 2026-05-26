@@ -1,0 +1,328 @@
+/* ===============================
+   GLOBAL: remove width limits
+================================ */
+.bd-page-width,
+.bd-container,
+.bd-layout,
+.bd-main,
+.bd-content,
+.bd-content-area {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* ===============================
+   MARKDOWN (.md) PAGES
+================================ */
+.bd-article-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ===============================
+   NOTEBOOK (.ipynb) PAGES
+================================ */
+
+/* Main notebook container */
+.jp-Notebook {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Cells */
+.jp-Cell {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Outputs (plots, tables) */
+.jp-OutputArea {
+    max-width: 1200px !important;
+}
+
+/* Titles and markdown inside notebooks */
+.bd-content .jp-Notebook {
+    max-width: 1200px !important;
+}
+
+/* ===============================
+   RIGHT SIDEBAR (optional)
+================================ */
+.bd-sidebar-secondary {
+    width: 160px !important;
+}
+
+/* ===============================
+   SPACING (optional)
+================================ */
+.bd-content {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+/* ===============================
+   SPACING (optional)
+================================ */
+.bd-content {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+/* =========================================
+   FORCE 2-COLUMN LAYOUT (REMOVE RIGHT SIDE)
+========================================= */
+
+/* Remove the right column entirely */
+.bd-layout {
+    grid-template-columns: 260px 1fr !important;
+}
+
+/* Hide anything that tries to live in right column */
+.bd-sidebar-secondary,
+.bd-toc,
+aside.bd-sidebar {
+    display: none !important;
+}
+
+
+/* ✅ FORCE 2-column layout (this is the key fix) */
+.bd-layout {
+    grid-template-columns: 260px 1fr !important;
+}
+
+/* =====================================
+   FORCE JUPYTER NOTEBOOK INTO ARTICLE MODE
+===================================== */
+
+/* This is the REAL wrapper causing narrow layout */
+.jp-NotebookPanel {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Inner notebook wrapper */
+.jp-NotebookPanel-notebook {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Force article-like width */
+.jp-Notebook {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensure all cells follow */
+.jp-Cell {
+    max-width: 1200px !important;
+}
+
+/* Ensure outputs do not shrink */
+.jp-OutputArea {
+    max-width: 1200px !important;
+}
+
+
+/* ========================================
+   FINAL OVERRIDE: notebook mode wrapper
+======================================== */
+
+/* this is the hidden limiter */
+.jp-NotebookPanel-mode {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* make notebook fill available space */
+.jp-NotebookPanel,
+.jp-Notebook {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* then re-center nicely */
+.jp-Cell,
+.jp-OutputArea {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* =========================================
+   REMOVE PAGE-LEVEL TABLE OF CONTENTS
+========================================= */
+
+/* This is the actual TOC appearing in behandle_tall */
+
+.bd-toc {
+    position: fixed;
+    right: 0;
+    width: 200px;
+}
+
+
+/* Important: remove the column space it occupies */
+.bd-layout {
+    grid-template-columns: 260px 1fr !important;
+}
+
+/* =========================================
+   FORCE ALL PAGES TO SAME WIDTH (FINAL FIX)
+========================================= */
+
+/* Override the "book text width" constraint */
+.bd-content .bd-article-container {
+    max-width: 1200px !important;
+    width: 100% !important;
+}
+
+/* Ensure grid does not reserve extra space */
+.bd-layout {
+    grid-template-columns: 260px 1fr !important;
+}
+
+/* =========================================
+   FIX PANDAS TABLE WIDTH (THIS IS THE KEY)
+========================================= */
+
+/* Make tables use full width */
+.bd-content table {
+    width: 100% !important;
+    display: block;
+    overflow-x: auto;
+}
+
+/* Prevent centering behavior */
+.bd-content table {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Fix notebook output container */
+.jp-OutputArea-output {
+    width: 100% !important;
+    overflow-x: auto;
+}
+
+/* =====================================
+   FIX: force left-aligned text
+===================================== */
+
+/* Main article text */
+.bd-content {
+    text-align: left !important;
+}
+
+/* Paragraphs */
+.bd-content p {
+    text-align: left !important;
+}
+
+/* Lists */
+.bd-content ul,
+.bd-content ol {
+    text-align: left !important;
+    margin-left: 1.5rem !important;
+}
+
+/* =====================================
+   FIX: all text left aligned (final)
+===================================== */
+
+/* main text container */
+.bd-article-container {
+    text-align: left !important;
+}
+
+/* paragraphs specifically */
+.bd-article-container p {
+    text-align: left !important;
+}
+
+/* ensure no inheritance from parent */
+.bd-main {
+    text-align: left !important;
+}
+
+
+.bd-article-container * {
+    text-align: left !important;
+}
+
+/* =====================================
+   FORCE SAME FONT EVERYWHERE
+===================================== */
+
+/* main text */
+.bd-article-container {
+    font-family: var(--pst-font-family-base) !important;
+    line-height: 1.7 !important;
+}
+
+/* paragraphs */
+.bd-article-container p {
+    font-family: var(--pst-font-family-base) !important;
+    line-height: 1.7 !important;
+}
+
+/* ensure consistency after figure */
+.bd-article-container * {
+    font-family: inherit !important;
+}
+
+/* =====================================
+   FORCE SAME TEXT STYLE EVERYWHERE
+===================================== */
+
+/* normal text everywhere */
+.bd-article-container p {
+    font-family: var(--pst-font-family-base) !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    color: var(--pst-color-text-base) !important;
+    margin-bottom: 1em !important;
+}
+
+/* ensure nothing overrides after figure */
+.bd-article-container * {
+    font-weight: inherit !important;
+    color: inherit !important;
+}
+
+/* =========================================
+   FORCE FULL WIDTH (OVERRIDE EVERYTHING)
+========================================= */
+
+/* Force main layout grid */
+.bd-layout {
+    grid-template-columns: 260px 1fr !important;
+}
+
+/* Remove right TOC completely */
+.bd-sidebar-secondary,
+.bd-toc {
+    display: none !important;
+}
+
+/* Expand main content */
+.bd-main {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure article fills width */
+.bd-content {
+    width: 100% !important;
+}
+
+/* Force inner container wide */
+.bd-article-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
