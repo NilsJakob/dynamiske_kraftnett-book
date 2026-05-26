@@ -23,7 +23,7 @@ exclude_patterns:
 sphinx:
   config:
     html_css_files:
-      - custom.css
+      - override.css
 
   extra_extensions: 
     - sphinxcontrib.bibtex
