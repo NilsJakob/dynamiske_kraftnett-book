@@ -1,4 +1,4 @@
-name: test-workflow
+name: deploy-book-v2
 
 on:
   push:
